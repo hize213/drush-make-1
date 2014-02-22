@@ -24,15 +24,9 @@ projects[] = rules
 projects[] = devel
 projects[] = fpa
 projects[] = libraries
-projects[] = omega_tools
-projects[] = delta
-projects[] = omega
-projects[] = og
-projects[] = og_extras
+#projects[] = og
+#projects[] = og_extras
 projects[] = entityreference
 projects[] = entityreference_prepopulate
 projects[] = views_bulk_operations
-
-; for openalayers maps also downlaod
-; geophp geofield geocoder geocoder_autocomplete openlayers mapbox
-
+projects[] = adaptivetheme
