@@ -2,13 +2,15 @@ core=7.x
 api=2
 
 defaults[projects][subdir] = contrib
+
 ; core modules
 projects[] = drupal
 projects[] = views
-projects[] = ctools
+
 ; Date modules
 projects[] = date
 projects[] = calendar
+
 ; Utility modules
 projects[] = admin_menu
 projects[] = advanced_help
@@ -21,12 +23,17 @@ projects[] = context
 projects[] = entity
 projects[] = token
 projects[] = rules
-projects[] = devel
 projects[] = fpa
 projects[] = libraries
 #projects[] = og
 #projects[] = og_extras
 projects[] = entityreference
 projects[] = entityreference_prepopulate
-projects[] = views_bulk_operations
+#projects[] = views_bulk_operation
+
+; devel modules
+projects[devel][subdir] = devel
+
+; Theme
 projects[] = adaptivetheme
+
