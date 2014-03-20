@@ -25,11 +25,8 @@ projects[] = token
 projects[] = rules
 projects[] = fpa
 projects[] = libraries
-#projects[] = og
-#projects[] = og_extras
 projects[] = entityreference
 projects[] = entityreference_prepopulate
-#projects[] = views_bulk_operation
 
 ; devel modules
 projects[devel][subdir] = devel
