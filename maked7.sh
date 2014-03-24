@@ -42,7 +42,7 @@ drush en strongarm -y
 
 drush en entity -y
 drush en entity_token -y
-drush en rule
+drush en rules
 
 drush en token -y
 drush en libraries -y
