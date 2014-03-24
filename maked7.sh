@@ -22,11 +22,14 @@ fi
 cd $1
 drush si --db-url=mysqli://$DB_USER:$DB_PASS@$DB_HOST/$1 --account-name=$ADMIN_NAME --account-pass=$ADMIN_PASS --site-name=$1 --site-mail=$ADMIN_MAIL -y
 
-# Ctools, Views, proper toolbar.
-drush en admin_menu -y
-drush en admin_menu_toolbar -y
+# disable some modules
 drush dis toolbar -y
 drush dis shortcut -y
+drush dis overlay -y
+
+# ctools, views, proper toolbar.
+drush en admin_menu -y
+drush en admin_menu_toolbar -y
 drush en module_filter -y
 drush en fpa -y
 drush en diff -y
