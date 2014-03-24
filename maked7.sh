@@ -1,5 +1,5 @@
 #!/bin/bash
-# arguments
+# constants
 readonly DB_USER="root"
 readonly DB_PASS="root"
 readonly DB_HOST="localhost"
@@ -7,12 +7,13 @@ readonly ADMIN_NAME="superadmin"
 readonly ADMIN_PASS="admin"
 readonly ADMIN_MAIL="cbfannin@gmail.com"
 
+# check for argument
 if [[ -z "$1" ]]; then
   echo "Arguments needed <dbname>"
   exit 1
 fi
 
-# Use a drush makefile
+# Use specified drush makefile
 drush make drupal7.drush.make $1 -y
 if [[ "$?" -ne 0 ]]; then
   echo "Something went wrong, did not make directory"
@@ -22,7 +23,7 @@ fi
 cd $1
 drush si --db-url=mysqli://$DB_USER:$DB_PASS@$DB_HOST/$1 --account-name=$ADMIN_NAME --account-pass=$ADMIN_PASS --site-name=$1 --site-mail=$ADMIN_MAIL -y
 
-# Ctools, Views, proper toolbar.
+# ctools, views, proper toolbar.
 drush en admin_menu -y
 drush en admin_menu_toolbar -y
 drush dis toolbar -y
