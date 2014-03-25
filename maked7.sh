@@ -23,11 +23,20 @@ fi
 cd $1
 drush si --db-url=mysqli://$DB_USER:$DB_PASS@$DB_HOST/$1 --account-name=$ADMIN_NAME --account-pass=$ADMIN_PASS --site-name=$1 --site-mail=$ADMIN_MAIL -y
 
+<<<<<<< HEAD
 # ctools, views, proper toolbar.
 drush en admin_menu -y
 drush en admin_menu_toolbar -y
+=======
+# disable some modules
+>>>>>>> 57bfb91bd63c5189d4a7ad5e291224e0bd20285d
 drush dis toolbar -y
 drush dis shortcut -y
+drush dis overlay -y
+
+# ctools, views, proper toolbar.
+drush en admin_menu -y
+drush en admin_menu_toolbar -y
 drush en module_filter -y
 drush en fpa -y
 drush en diff -y
@@ -43,7 +52,7 @@ drush en strongarm -y
 
 drush en entity -y
 drush en entity_token -y
-drush en rule
+drush en rules -y
 
 drush en token -y
 drush en libraries -y
