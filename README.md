@@ -5,7 +5,6 @@ This script in combination with the associated drush make file is set up to down
 
 The following command will create a new site in the directory called &lt;dbname&gt; with the database name also of &lt;dbname&gt;. Theme and hosts files will also reflect &lt;dbname&gt;. After rebooting MAMP, go to &lt;dbname&gt;/ in the browser.
 
-command to run from within this dir:
-./maked7 &lt;dbname&gt;
+<strong>command to run from within this dir: </strong>./maked7 &lt;dbname&gt;
 
 Admin information is hardcoded in the script. Admin and site information will be provided after install completes successfully.
