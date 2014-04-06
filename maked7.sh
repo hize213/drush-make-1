@@ -77,7 +77,7 @@ cp gitignore/Drupal.gitignore .gitignore
 sudo rm -R gitignore
 
 # create virtual host for this site
-sudo sh -c 'echo "127.0.0.1       $1" >> /etc/hosts'
+echo "127.0.0.1       $1" | sudo tee -a /etc/hosts
 echo "" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "#$1" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "<VirtualHost *:80>" >> /Applications/MAMP/conf/apache/vhosts.conf
