@@ -81,7 +81,7 @@ echo "127.0.0.1       $1" | sudo tee -a /etc/hosts
 echo "" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "#$1" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "<VirtualHost *:80>" >> /Applications/MAMP/conf/apache/vhosts.conf
-echo -e "  DocumentRoot \"/Volumes/cbfannin/htdocs/$1/\" >> /Applications/MAMP/conf/apache/vhosts.conf
+echo "  DocumentRoot '/Volumes/cbfannin/htdocs/$1/' >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "  ServerName $1" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "</VirtualHost>" >> /Applications/MAMP/conf/apache/vhosts.conf 
 
