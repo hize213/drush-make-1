@@ -23,47 +23,67 @@ fi
 cd $1
 drush si --db-url=mysqli://$DB_USER:$DB_PASS@$DB_HOST/$1 --account-name=$ADMIN_NAME --account-pass=$ADMIN_PASS --site-name=$1 --site-mail=$ADMIN_MAIL -y
 
-# ctools, views, proper toolbar.
-drush en admin_menu -y
-drush en admin_menu_toolbar -y
-
 # disable some modules
 drush dis toolbar -y
 drush dis shortcut -y
 drush dis overlay -y
 
-# ctools, views, proper toolbar.
-drush en admin_menu -y
-drush en admin_menu_toolbar -y
-drush en module_filter -y
-drush en fpa -y
-drush en diff -y
+# enable some modules
 drush en ctools -y
 drush en views -y
 drush en views_ui -y
-
+drush en admin_menu -y
+drush en admin_menu_toolbar -y
+drush en admin_views -y
 drush en advanced_help -y
 drush en environment_indicator -y
-
+drush en module_filter -y
 drush en features -y
 drush en strongarm -y
-
+drush en context -y
 drush en entity -y
 drush en entity_token -y
-drush en rules -y
-
 drush en token -y
+drush en rules -y
+drush en fpa -y
 drush en libraries -y
+drush en entityreference -y
+drush en entityreference_prepopulate -y
+drush en panels -y
+
+#field stuff
+drush en link -y
+drush en email -y
+drush en phone -y
+drush en addressfield -y
+drush en field_collection -y
+drush en field_group -y
 
 #devel stuff
 drush en devel -y
 drush en devel_generate -y
 
-drush en entityreference -y
-drush en entityreference_prepopulate -y
-drush en views_bulk_operations -y
+#adaptive theme
+drush adaptivetheme "$1" $1
+drush en $1 -y
 
 drush cc all
+
+# initialize git repo and git clone custom drupal .gitignore
+git init
+rm .gitignore
+git clone git@github.com:agentofcode/gitignore.git
+cp gitignore/Drupal.gitignore .gitignore
+sudo rm -R gitignore
+
+# create virtual host for this site
+sudo sh -c 'echo "127.0.0.1       $1" >> /etc/hosts'
+echo "" >> /Applications/MAMP/conf/apache/vhosts.conf
+echo "#$1" >> /Applications/MAMP/conf/apache/vhosts.conf
+echo "<VirtualHost *:80>" >> /Applications/MAMP/conf/apache/vhosts.conf
+echo "  DocumentRoot \"/Volumes/cbfannin/htdocs/$1/\" >> /Applications/MAMP/conf/apache/vhosts.conf
+echo "  ServerName $1" >> /Applications/MAMP/conf/apache/vhosts.conf
+echo "</VirtualHost>" >> /Applications/MAMP/conf/apache/vhosts.conf 
 
 # output
 echo ""
