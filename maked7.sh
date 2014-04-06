@@ -41,7 +41,6 @@ drush en module_filter -y
 drush en features -y
 drush en strongarm -y
 drush en context -y
-drush en entity -y
 drush en entity_token -y
 drush en token -y
 drush en rules -y
