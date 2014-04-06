@@ -62,9 +62,10 @@ drush en field_group -y
 drush en devel -y
 drush en devel_generate -y
 
-#adaptive theme
+#adaptive theme enable and set as default
 drush adaptivetheme "$1" $1
 drush en $1 -y
+drush vset theme_default $1
 
 drush cc all
 
@@ -74,6 +75,10 @@ rm .gitignore
 git clone git@github.com:agentofcode/gitignore.git
 cp gitignore/Drupal.gitignore .gitignore
 sudo rm -R gitignore
+
+# get of of site dir and move new site up to htdocs root
+cd ../
+mv $1 ../
 
 # create virtual host for this site
 echo "127.0.0.1       $1" | sudo tee -a /etc/hosts
