@@ -76,7 +76,7 @@ git clone git@github.com:agentofcode/gitignore.git
 cp gitignore/Drupal.gitignore .gitignore
 sudo rm -R gitignore
 
-# get of of site dir and move new site up to htdocs root
+# get out of site dir and move new site up to htdocs root
 cd ../
 mv $1 ../
 
