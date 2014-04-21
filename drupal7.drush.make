@@ -1,16 +1,17 @@
 core=7.x
 api=2
 
-defaults[projects][subdir] = contrib
-
 ; core modules
 projects[] = drupal
-projects[] = views
-projects[] = ctools
+projects[views][subdir] = "contrib"
+projects[ctools][subdir] = "contrib"
+
+; devel modules
+projects[devel][subdir] = "devel"
 
 ; Date modules
-projects[] = date
-projects[] = calendar
+projects[date][subdir] = "contrib"
+projects[calendar][subdir] = "contrib"
 
 ; Utility modules
 projects[] = admin_menu
@@ -32,22 +33,5 @@ projects[] = entityreference_prepopulate
 projects[] = views_bulk_operations
 projects[] = panels
 
-;for the user
-projects[] = ckeditor
-projects[] = ckeditor_link
-;projects[] = media
-
-; I need more fields modules
-projects[] = link
-projects[] = email
-projects[] = phone
-projects[] = addressfield
-projects[] = field_collection
-projects[] = field_group
-
-; devel modules
-projects[devel][subdir] = devel
-
 ; Theme
 projects[] = adaptivetheme
-

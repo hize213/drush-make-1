@@ -50,14 +50,6 @@ drush en entityreference -y
 drush en entityreference_prepopulate -y
 drush en panels -y
 
-#field stuff
-drush en link -y
-drush en email -y
-drush en phone -y
-drush en addressfield -y
-drush en field_collection -y
-drush en field_group -y
-
 #devel stuff
 drush en devel -y
 drush en devel_generate -y
@@ -109,5 +101,3 @@ echo "db pass: $DB_PASS"
 echo "db host: $DB_HOST"
 echo ""
 echo ""
-
-
