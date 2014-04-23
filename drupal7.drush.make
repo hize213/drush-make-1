@@ -14,24 +14,24 @@ projects[date][subdir] = "contrib"
 projects[calendar][subdir] = "contrib"
 
 ; Utility modules
-projects[] = admin_menu
-projects[] = admin_views
-projects[] = advanced_help
-projects[] = environment_indicator
-projects[] = module_filter
-projects[] = features
-projects[] = strongarm
-projects[] = diff
-projects[] = context
-projects[] = entity
-projects[] = token
-projects[] = rules
-projects[] = fpa
-projects[] = libraries
-projects[] = entityreference
-projects[] = entityreference_prepopulate
-projects[] = views_bulk_operations
-projects[] = panels
+projects[admin_menu][subdir] = "contrib"
+projects[admin_views][subdir] = "contrib"
+projects[advanced_help][subdir] = "contrib"
+projects[environment_indicator][subdir] = "contrib"
+projects[module_filter][subdir] = "contrib"
+projects[features][subdir] = "contrib"
+projects[strongarm][subdir] = "contrib"
+projects[diff][subdir] = "contrib"
+projects[context][subdir] = "contrib"
+projects[entity][subdir] = "contrib"
+projects[token][subdir] = "contrib"
+projects[rules][subdir] = "contrib"
+projects[fpa][subdir] = "contrib"
+projects[libraries][subdir] = "contrib"
+projects[entityreference][subdir] = "contrib"
+projects[entityreference_prepopulate][subdir] = "contrib"
+projects[views_bulk_operations][subdir] = "contrib"
+projects[panels][subdir] = "contrib"
 
 ; Theme
 projects[] = adaptivetheme
