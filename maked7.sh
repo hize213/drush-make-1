@@ -48,7 +48,7 @@ drush en fpa -y
 drush en libraries -y
 drush en entityreference -y
 drush en entityreference_prepopulate -y
-drush en panels -y
+drush en pathauto -y
 
 #devel stuff
 drush en devel -y

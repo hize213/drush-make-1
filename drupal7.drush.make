@@ -31,7 +31,7 @@ projects[libraries][subdir] = "contrib"
 projects[entityreference][subdir] = "contrib"
 projects[entityreference_prepopulate][subdir] = "contrib"
 projects[views_bulk_operations][subdir] = "contrib"
-projects[panels][subdir] = "contrib"
+projects[pathauto][subdir] = "contrib"
 
 ; Theme
 projects[] = adaptivetheme
