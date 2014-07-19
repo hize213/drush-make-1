@@ -5,9 +5,9 @@ readonly DB_PASS="root"
 readonly DB_HOST="localhost"
 readonly ADMIN_NAME="superadmin"
 readonly ADMIN_PASS="admin"
-readonly ADMIN_MAIL="cbfannin@gmail.com"
+readonly ADMIN_MAIL="admin@gigcitycode.com"
 
-# check for argument
+# check for dbname argument
 if [[ -z "$1" ]]; then
   echo "Arguments needed <dbname>"
   exit 1
@@ -54,19 +54,7 @@ drush en pathauto -y
 drush en devel -y
 drush en devel_generate -y
 
-#adaptive theme enable and set as default
-drush adaptivetheme "$1" $1
-drush en $1 -y
-drush vset theme_default $1
-
 drush cc all
-
-# initialize git repo and git clone custom drupal .gitignore
-git init
-rm .gitignore
-git clone git@github.com:agentofcode/gitignore.git
-cp gitignore/Drupal.gitignore .gitignore
-sudo rm -R gitignore
 
 # get out of site dir and move new site up to htdocs root
 cd ../
