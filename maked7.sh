@@ -24,7 +24,7 @@ cd $1
 drush si --db-url=mysqli://$DB_USER:$DB_PASS@$DB_HOST/$1 --account-name=$ADMIN_NAME --account-pass=$ADMIN_PASS --site-name=$1 --site-mail=$ADMIN_MAIL -y
 
 # disable some modules
-drush dis toolbar -y
+# drush dis toolbar -y (disabled by adminimal theme)
 drush dis shortcut -y
 drush dis overlay -y
 
