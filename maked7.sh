@@ -35,7 +35,7 @@ drush en views_ui -y
 drush en admin_menu -y
 drush en admin_menu_toolbar -y
 drush en admin_views -y
-drush en admininimal_admin_menu -y
+drush en adminimal_admin_menu -y
 drush en advanced_help -y
 drush en module_filter -y
 drush en features -y
@@ -56,6 +56,14 @@ drush en devel_generate -y
 
 drush cc all
 
+#initiate git repo and clone custom drupal .gitignore
+git init
+git clone https://github.com/agentofcode/gitignore.git
+mv gitignore/Drupal.gitignore .gitignore
+sudo rm -R gitignore
+git add .
+git commit -m "Initial Commit"
+
 # get out of site dir and move new site up to htdocs root
 cd ..
 mv $1 ..
@@ -69,16 +77,10 @@ echo "  DocumentRoot \"/Users/cbfannin/htdocs/$1/\"" >> /Applications/MAMP/conf/
 echo "  ServerName $1" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "</VirtualHost>" >> /Applications/MAMP/conf/apache/vhosts.conf 
 
-#initiate git repo and clone custom drupal .gitignore
-git clone https://github.com/agentofcode/gitignore.git
-mv gitignore/Drupal.gitignore .gitignore
-
 # output
 echo ""
 echo ""
 echo "Drupal 7 site install completed successfully!"
-echo ""
-echo "SITE INFORMATION:"
 echo "---------------------------------------------"
 echo "site name: $1"
 echo "admin name: $ADMIN_NAME"
