@@ -35,8 +35,8 @@ drush en views_ui -y
 drush en admin_menu -y
 drush en admin_menu_toolbar -y
 drush en admin_views -y
+drush en admininimal_admin_menu -y
 drush en advanced_help -y
-drush en environment_indicator -y
 drush en module_filter -y
 drush en features -y
 drush en strongarm -y
@@ -57,8 +57,8 @@ drush en devel_generate -y
 drush cc all
 
 # get out of site dir and move new site up to htdocs root
-cd ../
-mv $1 ../
+cd ..
+mv $1 ..
 
 # create virtual host for this site
 echo "127.0.0.1       $1" | sudo tee -a /etc/hosts
