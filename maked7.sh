@@ -69,6 +69,10 @@ echo "  DocumentRoot \"/Users/cbfannin/htdocs/$1/\"" >> /Applications/MAMP/conf/
 echo "  ServerName $1" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "</VirtualHost>" >> /Applications/MAMP/conf/apache/vhosts.conf 
 
+#initiate git repo and clone custom drupal .gitignore
+git clone https://github.com/agentofcode/gitignore.git
+mv gitignore/Drupal.gitignore .gitignore
+
 # output
 echo ""
 echo ""
