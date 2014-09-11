@@ -34,5 +34,5 @@ projects[views_bulk_operations][subdir] = "contrib"
 projects[pathauto][subdir] = "contrib"
 
 ; Theme
-projects[] = "bootstrap"
-projects[] = "adminimal_theme"
+projects[] = bootstrap
+projects[] = adminimal_theme

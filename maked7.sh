@@ -24,7 +24,6 @@ cd $1
 drush si --db-url=mysqli://$DB_USER:$DB_PASS@$DB_HOST/$1 --account-name=$ADMIN_NAME --account-pass=$ADMIN_PASS --site-name=$1 --site-mail=$ADMIN_MAIL -y
 
 # disable some modules
-# drush dis toolbar -y (disabled by adminimal theme)
 drush dis shortcut -y
 drush dis overlay -y
 
@@ -33,7 +32,6 @@ drush en ctools -y
 drush en views -y
 drush en views_ui -y
 drush en admin_menu -y
-drush en admin_menu_toolbar -y
 drush en admin_views -y
 drush en adminimal_admin_menu -y
 drush en advanced_help -y
@@ -53,6 +51,11 @@ drush en pathauto -y
 #devel stuff
 drush en devel -y
 drush en devel_generate -y
+
+#theme defaults
+drush en bootstrap -y
+drush vset theme_default bootstrap
+drush vset admin_theme adminimal_theme
 
 drush cc all
 
@@ -98,3 +101,5 @@ echo ""
 echo "---------------------------------------------"
 echo "------ DON'T FORGET TO RESTART MAMP!! -------"
 echo "---------------------------------------------"
+echo ""
+echo ""
