@@ -53,8 +53,6 @@ drush en devel -y
 drush en devel_generate -y
 
 #theme defaults
-drush en bootstrap -y
-drush vset theme_default bootstrap
 drush vset admin_theme adminimal_theme
 
 drush cc all
