@@ -49,6 +49,7 @@ drush en entityreference_prepopulate -y
 drush en pathauto -y
 drush en panels -y
 drush en panelizer -y
+drush en jquery_update -y
 
 #devel stuff
 drush en devel -y

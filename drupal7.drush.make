@@ -14,6 +14,7 @@ projects[date][subdir] = "contrib"
 projects[calendar][subdir] = "contrib"
 
 ; Utility modules
+projects[jquery_update][subdir] = "contrib"
 projects[admin_menu][subdir] = "contrib"
 projects[admin_views][subdir] = "contrib"
 projects[adminimal_admin_menu][subdir] = "contrib"
