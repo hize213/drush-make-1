@@ -47,6 +47,8 @@ drush en libraries -y
 drush en entityreference -y
 drush en entityreference_prepopulate -y
 drush en pathauto -y
+drush en panels -y
+drush en panelizer -y
 
 #devel stuff
 drush en devel -y
@@ -65,9 +67,10 @@ sudo rm -R gitignore
 git add .
 git commit -m "Initial Commit"
 
-# get out of site dir and move new site up to htdocs root
+# move new site to htdocs
 cd ..
-mv $1 ..
+mv $1 ~/htdocs/
+cd ~/htdocs/$1
 
 # create virtual host for this site
 echo "127.0.0.1       $1" | sudo tee -a /etc/hosts
@@ -77,6 +80,11 @@ echo "<VirtualHost *:80>" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "  DocumentRoot \"/Users/cbfannin/htdocs/$1/\"" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "  ServerName $1" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "</VirtualHost>" >> /Applications/MAMP/conf/apache/vhosts.conf 
+
+#restart MAMP apache and mysql servers
+#cd /Applications/MAMP/bin
+#sudo ./stop.sh
+#sudo ./start.sh
 
 # output
 echo ""

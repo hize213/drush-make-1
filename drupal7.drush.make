@@ -32,6 +32,8 @@ projects[entityreference][subdir] = "contrib"
 projects[entityreference_prepopulate][subdir] = "contrib"
 projects[views_bulk_operations][subdir] = "contrib"
 projects[pathauto][subdir] = "contrib"
+projects[panels][subdir] = "contrib"
+projects[panelizer][subdir] = "contrib"
 
 ; Theme
 projects[] = adminimal_theme
