@@ -71,7 +71,6 @@ git commit -m "Initial Commit"
 # move new site to htdocs
 cd ..
 mv $1 ~/htdocs/
-cd ~/htdocs/$1
 
 # create virtual host for this site
 echo "127.0.0.1       $1" | sudo tee -a /etc/hosts
