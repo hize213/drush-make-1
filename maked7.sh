@@ -37,6 +37,7 @@ drush en adminimal_admin_menu -y
 drush en advanced_help -y
 drush en module_filter -y
 drush en features -y
+drush en file_entity -y
 drush en strongarm -y
 drush en context -y
 drush en entity_token -y
