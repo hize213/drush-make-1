@@ -61,14 +61,6 @@ drush vset admin_theme adminimal_theme
 
 drush cc all
 
-#initiate git repo and clone custom drupal .gitignore
-git init
-git clone https://github.com/agentofcode/gitignore.git
-mv gitignore/Drupal.gitignore .gitignore
-sudo rm -R gitignore
-git add .
-git commit -m "Initial Commit"
-
 # move new site to htdocs
 cd ..
 mv $1 ~/htdocs/
@@ -81,11 +73,6 @@ echo "<VirtualHost *:80>" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "  DocumentRoot \"/Users/cbfannin/htdocs/$1/\"" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "  ServerName $1" >> /Applications/MAMP/conf/apache/vhosts.conf
 echo "</VirtualHost>" >> /Applications/MAMP/conf/apache/vhosts.conf 
-
-#restart MAMP apache and mysql servers
-#cd /Applications/MAMP/bin
-#sudo ./stop.sh
-#sudo ./start.sh
 
 # output
 echo ""
