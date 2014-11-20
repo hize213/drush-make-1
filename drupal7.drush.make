@@ -39,4 +39,3 @@ projects[panelizer][subdir] = "contrib"
 
 ; Theme
 projects[] = adminimal_theme
-projects[] = bootstrap
