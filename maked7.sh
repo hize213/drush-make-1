@@ -43,6 +43,7 @@ drush en context -y
 drush en entity_token -y
 drush en token -y
 drush en rules -y
+drush en rules_admin -y
 drush en fpa -y
 drush en libraries -y
 drush en entityreference -y
