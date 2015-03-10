@@ -2,10 +2,10 @@
 # constants
 readonly DB_USER="root"
 readonly DB_PASS="root"
-readonly DB_HOST="localhost"
+readonly DB_HOST="127.0.0.1"
 readonly ADMIN_NAME="superadmin"
 readonly ADMIN_PASS="admin"
-readonly ADMIN_MAIL="admin@gigcitycode.com"
+readonly ADMIN_MAIL="admin@example.com"
 
 # check for dbname argument
 if [[ -z "$1" ]]; then
