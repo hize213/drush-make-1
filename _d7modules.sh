@@ -2,7 +2,7 @@
 
 # make necessary module directories
 mkdir sites/all/modules/contrib
-mkdir sites/all/modules/devel
+#mkdir sites/all/modules/devel
 mkdir sites/all/modules/features
 mkdir sites/all/modules/custom
 
@@ -18,7 +18,6 @@ drush en views_ui -y
 drush en jquery_update -y
 drush en dates -y
 drush en admin_menu -y
-drush en admin_menu_toolbar -y
 drush en token -y
 drush en entity -y
 drush en file_entity -y
@@ -38,13 +37,27 @@ drush en libraries -y
 drush en entityreference -y
 drush en entityreference_prepopulate -y
 drush en pathauto -y
+drush en media -y
+drush en fontyourface -y
+drush en fontawesome -y
+drush en font_settings -y
+drush en google_fonts_api -y
 drush en panels -y
+drush en panels_node -y
+drush en panels_ipe -y
+drush en panels_mini -y
 drush en panelizer -y
+drush en panels_bootstrap_layouts-7.x-3.x-dev -y
+
+# enable some themes
+drush en bootstrap -y
+drush en adminimal_theme -y
+drush en adminimal_admin_menu -y
 
 #devel stuff
-mv sites/all/modules/contrib/devel sites/all/modules/devel/
-drush en devel -y
-drush en devel_generate -y
+#mv sites/all/modules/contrib/devel sites/all/modules/devel/
+#drush en devel -y
+#drush en devel_generate -y
 
 drush cc all
 drush updb

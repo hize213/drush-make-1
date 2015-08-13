@@ -7,7 +7,7 @@ projects[views][subdir] = "contrib"
 projects[ctools][subdir] = "contrib"
 
 ; devel modules
-projects[devel][subdir] = "devel"
+; projects[devel][subdir] = "devel"
 
 ; Date modules
 projects[date][subdir] = "contrib"
